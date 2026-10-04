@@ -1,0 +1,375 @@
+/* =========================
+   HEADER
+========================= */
+
+.categories-header {
+  padding: 85px 0 75px;
+
+  background-color: var(--dark-color);
+
+  text-align: center;
+}
+
+.categories-header .section-label {
+  color: var(--primary-color);
+}
+
+.categories-header h1 {
+  max-width: 700px;
+
+  margin: 14px auto 16px;
+
+  color: var(--white-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.categories-header h1 span {
+  color: var(--primary-color);
+}
+
+.categories-header p {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  color: #aeb4c1;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.categories-page-section {
+  background-color: var(--background-color);
+}
+
+.categories-page-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 40px;
+}
+
+.categories-page-intro h2 {
+  margin: 8px 0 0;
+
+  color: var(--dark-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.categories-page-intro p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: var(--text-light);
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.categories-page-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.category-page-card {
+  overflow: hidden;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--white-color);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.category-page-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.category-page-image {
+  position: relative;
+
+  height: 210px;
+
+  overflow: hidden;
+}
+
+.category-page-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(23, 28, 43, 0.15);
+}
+
+.category-page-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.category-page-card:hover
+.category-page-image img {
+  transform: scale(1.05);
+}
+
+.category-page-icon {
+  position: absolute;
+
+  left: 20px;
+  bottom: 18px;
+
+  z-index: 2;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background-color: var(--white-color);
+  color: var(--primary-color);
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.category-page-content {
+  padding: 23px;
+}
+
+.category-page-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.category-page-title-row h3 {
+  margin: 0;
+
+  color: var(--dark-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.category-page-count {
+  flex-shrink: 0;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.category-page-content p {
+  min-height: 58px;
+
+  margin: 0 0 20px;
+
+  color: var(--text-light);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.category-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--dark-color);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+
+.category-page-link:hover {
+  color: var(--primary-color);
+}
+
+
+
+/* =========================
+   CTA
+========================= */
+
+.categories-page-cta {
+  padding: 80px 0;
+
+  background-color: var(--dark-color);
+}
+
+.categories-cta-content {
+  max-width: 650px;
+
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.categories-cta-content .section-label {
+  color: var(--primary-color);
+}
+
+.categories-cta-content h2 {
+  margin: 12px 0 15px;
+
+  color: var(--white-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.categories-cta-content p {
+  margin: 0 auto 25px;
+
+  color: #aeb4c1;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.categories-cta-content .btn-primary {
+  display: inline-flex;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .categories-page-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .categories-header {
+    padding: 65px 0 55px;
+  }
+
+  .categories-header h1 {
+    font-size: 38px;
+  }
+
+  .categories-page-intro {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .categories-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-page-image {
+    height: 220px;
+  }
+
+  .categories-page-cta {
+    padding: 60px 0;
+  }
+
+  .categories-cta-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .categories-header h1 {
+    font-size: 32px;
+  }
+
+  .category-page-content {
+    padding: 20px;
+  }
+
+  .category-page-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .category-page-content p {
+    min-height: auto;
+  }
+}

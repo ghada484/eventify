@@ -1,0 +1,313 @@
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+  background-color: var(--white-color);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.categories-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.categories-header .section-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.categories-header .section-title {
+  margin-bottom: 8px;
+}
+
+.categories-header .section-subtitle {
+  max-width: 520px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.categories-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================
+   CATEGORY CARD
+========================= */
+
+.category-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 86px;
+
+  padding: 17px 18px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+
+  background-color: #fcfcfc;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.category-card:hover {
+  border-color: transparent;
+
+  background-color: var(--white-color);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  box-shadow: 0 7px 18px rgba(23, 28, 43, 0.07);
+
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   CATEGORY COLORS
+========================= */
+
+.category-card.music .category-icon {
+  background-color: #fff0ec;
+  color: #ff6b4a;
+}
+
+.category-card.technology .category-icon {
+  background-color: #edf4ff;
+  color: #4b7bec;
+}
+
+.category-card.workshops .category-icon {
+  background-color: #f5efff;
+  color: #8b5cf6;
+}
+
+.category-card.sports .category-icon {
+  background-color: #ecf9f1;
+  color: #22a06b;
+}
+
+.category-card.education .category-icon {
+  background-color: #fff7e6;
+  color: #e5a12b;
+}
+
+.category-card.business .category-icon {
+  background-color: #eef0ff;
+  color: #5967d9;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.category-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  flex: 1;
+}
+
+.category-info h3 {
+  overflow: hidden;
+
+  color: var(--dark-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.category-info span {
+  color: var(--text-muted);
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.category-card:hover .category-info h3 {
+  color: var(--primary-color);
+}
+
+
+/* =========================
+   CATEGORY ACTION
+========================= */
+
+.category-action {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  border: 1px solid var(--primary-soft);
+  border-radius: 9px;
+
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.category-card:hover .category-action {
+  border-color: var(--primary-color);
+
+  background-color: var(--primary-color);
+
+  color: var(--white-color);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .categories-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .category-card {
+    min-height: 82px;
+
+    padding: 15px 16px;
+  }
+
+  .category-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 13px;
+
+    font-size: 18px;
+  }
+
+  .category-info h3 {
+    font-size: 15px;
+  }
+
+  .category-action {
+    padding: 0 10px;
+
+    font-size: 9px;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .category-card {
+    gap: 12px;
+  }
+
+  .category-action {
+    display: none;
+  }
+}

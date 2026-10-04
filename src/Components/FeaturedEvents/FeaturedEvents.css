@@ -1,0 +1,403 @@
+/* =========================
+   FEATURED EVENTS
+========================= */
+
+.featured-events {
+  background-color: var(--background-color);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.featured-header .section-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.featured-header .section-title {
+  margin-bottom: 8px;
+}
+
+.featured-header .section-subtitle {
+  max-width: 500px;
+}
+
+
+/* =========================
+   VIEW ALL
+========================= */
+
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+
+  padding: 0 15px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+
+  background-color: var(--white-color);
+  color: var(--dark-color);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.view-all-link:hover {
+  border-color: var(--primary-color);
+
+  background-color: var(--primary-soft);
+
+  color: var(--primary-color);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.featured-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card {
+  overflow: hidden;
+
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+
+  background-color: var(--white-color);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.event-card:hover {
+  border-color: #e5e5e7;
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.event-card-image {
+  position: relative;
+
+  height: 225px;
+
+  overflow: hidden;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.event-card:hover .event-card-image img {
+  transform: scale(1.035);
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.event-category {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 6px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, 0.94);
+
+  color: var(--dark-color);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+}
+
+
+/* =========================
+   FAVORITE
+========================= */
+
+.favorite-btn {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.94);
+
+  color: var(--dark-color);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+
+  transition: var(--transition);
+}
+
+.favorite-btn:hover {
+  background-color: var(--primary-soft);
+
+  color: var(--primary-color);
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.event-card-content {
+  padding: 21px;
+}
+
+.event-date {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.event-card-content h3 {
+  margin-bottom: 9px;
+
+  color: var(--dark-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  transition: var(--transition);
+}
+
+.event-card:hover .event-card-content h3 {
+  color: var(--primary-color);
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.event-location {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 19px;
+
+  color: var(--text-light);
+
+  font-size: 11px;
+}
+
+.event-location span {
+  color: var(--primary-color);
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #f1f1f2;
+}
+
+.event-price {
+  display: flex;
+  align-items: baseline;
+
+  gap: 5px;
+}
+
+.event-price span {
+  color: var(--text-muted);
+
+  font-size: 9px;
+}
+
+.event-price strong {
+  color: var(--dark-color);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   EVENT ACTION
+========================= */
+
+.event-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid var(--primary-soft);
+  border-radius: 9px;
+
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.event-action:hover {
+  border-color: var(--primary-color);
+
+  background-color: var(--primary-color);
+
+  color: var(--white-color);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .featured-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .view-all-link {
+    min-height: 38px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .event-card-image {
+    height: 240px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .event-card-content {
+    padding: 18px;
+  }
+
+  .event-card-content h3 {
+    font-size: 18px;
+  }
+}

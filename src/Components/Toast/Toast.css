@@ -1,0 +1,159 @@
+.toast {
+  position: fixed;
+  top: 90px;
+  right: 25px;
+  z-index: 9999;
+
+  min-width: 300px;
+  max-width: 420px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  background-color: var(--white-color);
+
+  box-shadow: var(--shadow-lg);
+
+  animation: toastSlideIn 0.3s ease;
+}
+
+.toast-icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.toast p {
+  flex: 1;
+
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.toast-close {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: var(--text-muted);
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.toast-close:hover {
+  color: var(--dark-color);
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.toast-success {
+  border-left: 4px solid var(--success-color);
+}
+
+.toast-success .toast-icon {
+  background-color: #eaf8f1;
+  color: var(--success-color);
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.toast-error {
+  border-left: 4px solid var(--danger-color);
+}
+
+.toast-error .toast-icon {
+  background-color: #fff0ef;
+  color: var(--danger-color);
+}
+
+/* =========================
+   WARNING
+========================= */
+
+.toast-warning {
+  border-left: 4px solid var(--warning-color);
+}
+
+.toast-warning .toast-icon {
+  background-color: #fff7e7;
+  color: var(--warning-color);
+}
+
+/* =========================
+   INFO
+========================= */
+
+.toast-info {
+  border-left: 4px solid var(--primary-color);
+}
+
+.toast-info .toast-icon {
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .toast {
+    top: 80px;
+    left: 15px;
+    right: 15px;
+
+    min-width: auto;
+    max-width: none;
+  }
+}
+
